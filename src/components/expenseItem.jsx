@@ -13,7 +13,7 @@ const ExpenseItem = ({ expense }) => {
 
 
   const bgColor = expense.payType === 'Paid'
-    ? 'bg-red-500'
+    ? 'bg-red-300'
     : expense.payType === 'To Receive'
     ? 'bg-purple-400'
     : expense.payType === 'Due'
@@ -74,13 +74,15 @@ const ExpenseItem = ({ expense }) => {
       <div className="flex items-center gap-2 flex-wrap">
         {isCheckable && (
           <input
-            type="checkbox"
-            checked={expense.completed}
-            onChange={() => {}}
-            onClick={(e) => e.stopPropagation()}
-            className="accent-green-500 w-4 h-4"
-            disabled={isEditing}
-          />
+  type="checkbox"
+  checked={expense.completed}
+  onChange={() => {}} // 👈 necessary!
+  // onClick={(e) => e.stopPropagation()} // 👈 stops parent from toggling twice
+  className="accent-green-500 w-4 h-4"
+  disabled={isEditing}
+/>
+
+
         )}
 
         {!isEditing ? (

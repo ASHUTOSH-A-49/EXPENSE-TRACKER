@@ -52,10 +52,12 @@ const ExpenseList = () => {
       monthlyTotals[year][month] = monthlyTotals[year][month] || 0;
       if (slotType === 'Paid') monthlyTotals[year][month] += Number(exp.amount);
       if (slotType === 'Received') monthlyTotals[year][month] -= Number(exp.amount);
+      if (slotType === 'Due Done') monthlyTotals[year][month] += Number(exp.amount);
 
       yearlyTotals[year] = yearlyTotals[year] || 0;
       if (slotType === 'Paid') yearlyTotals[year] += Number(exp.amount);
       if (slotType === 'Received') yearlyTotals[year] -= Number(exp.amount);
+      if (slotType === 'Due Done') yearlyTotals[year] += Number(exp.amount);
     }
   });
 
