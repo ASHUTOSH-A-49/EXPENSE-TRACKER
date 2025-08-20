@@ -4,6 +4,10 @@
 
 The Expense-Tracker is a simple, intuitive web application designed to help users manage their personal finances. This tool allows you to easily track income and expenses, providing a clear overview of your financial activity. It's built with React and modern web development practices, focusing on a clean and responsive user interface.
 
+### Live Demo
+
+You can view the live project here: [https://expense-tracker-049.netlify.app/](https://expense-tracker-049.netlify.app/)
+
 ### Key Features
 
 * **Add and Track Transactions:** ➕ Easily add new transactions, including a description, amount, and deadline.
